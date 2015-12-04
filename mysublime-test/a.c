@@ -29,6 +29,10 @@ void init_buff(BUFF* bf, int row, int col){
 	}
 }
 
+void close_buff(BUFF* bf){
+	free_array_2d((void**)bf->effects);
+}
+
 void dump_buff(BUFF* bf){
 	printf("starttime - %d\n", bf->starttime );
 	printf("duration - %d\n", bf->duration );
@@ -47,8 +51,7 @@ int main(){
 	int w = 5, h = 5;
 	init_buff(bf, w, h);
 	dump_buff(bf);
-	free_array_2d((void**)bf->effects);
-
+	close_buff(bf);
 	system("pause");
 	return 0;
 }

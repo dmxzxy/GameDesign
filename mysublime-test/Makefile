@@ -1,8 +1,11 @@
-helloworld:a.o
-	gcc a.o -o helloworld
+game:main.o lifegame.o
+	gcc main.o lifegame.o -o game
 
-a.o:a.c
-	gcc -c a.c -o a.o
+lifegame.o:lifegamecore.c
+	gcc -c lifegamecore.c -o lifegame.o
+
+main.o:main.c
+	gcc -c main.c -o main.o
 
 clean:
 	rm -rf *.o
