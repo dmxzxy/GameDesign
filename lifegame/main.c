@@ -1,6 +1,5 @@
 #include "lifegame.h"
 #include <windows.h>
-#include "array.h"
 
 int main(){
 	lifegame* game = open_lifegame();
@@ -16,4 +15,6 @@ int main(){
 		dump_lifegame(game);
 	}
 	close_lifegame(game);
+
+	return 0;
 }
