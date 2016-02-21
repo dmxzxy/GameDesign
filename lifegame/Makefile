@@ -1,3 +1,4 @@
+
 game:main.o lifegame.o
 	gcc main.o lifegame.o -o game
 

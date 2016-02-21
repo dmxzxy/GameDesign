@@ -4,7 +4,7 @@
 
 int main(){
 	lifegame* game = open_lifegame();
-	generate_lifegame(game, 30, 30);
+	generate_lifegame(game, 5, 5);
 	random_lifegame(game);
 	dump_lifegame(game);
 
